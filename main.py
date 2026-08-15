@@ -1,3 +1,4 @@
+from functools import reduce
 
 # dit is commentaar
 """
@@ -130,3 +131,13 @@ if __name__ == "__main__":
     surface = calc_disc_surface(radius)
 
     print(f"Surface area of the disc: {surface}")
+
+from functools import reduce
+
+numbers_str = ['1', '2', '3', '4', '5']  # iterable
+
+def add_two_nums(x, y):
+    return int(x) + int(y)
+
+total = reduce(add_two_nums, numbers_str)
+print(total)    # 15
