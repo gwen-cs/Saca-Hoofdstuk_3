@@ -30,10 +30,87 @@ x = int(input("what's x?: "))
 y = int(input("What's y?: "))
 z = x + y
 print (z)
+x = float(input("what's x?: "))
+y = float(input("What's y?: "))
+z = round(x / y)
+print (f"{z:.2f}")
+print (f"{z:,}")
 
+in_stock = 7
+purchase_cnt = int(input("How many items do you want to purchase? "))
+purchase_allowed = in_stock - purchase_cnt >= 0
+print(purchase_allowed)
+
+in_stock = 7
+purchase_cnt = input("How many items do you want to purchase? ")
+purchase_allowed = in_stock - purchase_cnt >= 0
+print(purchase_allowed)
+
+students = ["Hermione", "Harry", "Ron"]
+print(len(students))
+
+students[1] = "Draco"
+print(len(students))
+
+current_index = 0
+while current_index < len(students):
+    print(students[current_index])
+    current_index += 1
+
+for student in students:
+    print(student)
+
+courses = ["saca", "Leh", "chaos", "ctf"]
+scores = [20, 15, 5, 15]
+
+for i in range(len(courses)):
+    print(f"For the course: {courses[i]} i got a score of {scores[i]}/20")
+
+scores_per_course = {
+    "saca": 20,
+    "Leh": 15,
+    "caos": 5,
+    "ctf": 15
+}
+
+for course in scores_per_course:
+    print(course)
+    print(scores_per_course[course]
+
+t1 = ("apple", "mango")
+print(type(t1))  # <class 'tuple'>
+
+t2 = "banana", "cherry"
+print(type(t2))  # <class 'tuple'>
+
+t1 = ("apple", "mango")
+t2 = ("apple", 3, 1.4)
+t3 = ("apple", 3, 1.4, ("banana", 5))
+
+print(len(t1))  # 2
+print(len(t2))  # 3
+print(len(t3))  # 4
+
+t1 = (327, 419, 101, 667, 925, 225)
+print(max(t1))
+print(min(t1))
+print(sum(t1))
+
+t1 = ("apple", "banana", "cherry")
+print("banana" in t1)
+print("mango" in t1)
+
+t1 = ("apple", "banana", "cherry", "durian")
+print(t1[2])
 
 """
-x = int(input("what's x?: "))
-y = int(input("What's y?: "))
-z = x + y
-print (z)
+fruit1 = {"apple", "banana", "cherry"}
+fruit2 = {"banana", "cherry"}
+
+print(fruit1.isdisjoint(fruit2))
+print(fruit1.issubset(fruit2))
+print(fruit2.issubset(fruit1))
+print(fruit1.issubset(fruit1))
+print(fruit1.issuperset(fruit2))
+print(fruit2.issuperset(fruit1))
+print(fruit1.issuperset(fruit1))
