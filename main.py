@@ -103,14 +103,30 @@ print("mango" in t1)
 t1 = ("apple", "banana", "cherry", "durian")
 print(t1[2])
 
-"""
-fruit1 = {"apple", "banana", "cherry"}
-fruit2 = {"banana", "cherry"}
+def say_hello(name):
+    print(f"Hello there, {name}!")
 
-print(fruit1.isdisjoint(fruit2))
-print(fruit1.issubset(fruit2))
-print(fruit2.issubset(fruit1))
-print(fruit1.issubset(fruit1))
-print(fruit1.issuperset(fruit2))
-print(fruit2.issuperset(fruit1))
-print(fruit1.issuperset(fruit1))
+say_hello("Gwen")
+
+
+def calc_disc_surface(radius):
+    return radius * radius * 3.1415
+
+print(calc_disc_surface(15))
+
+
+"""
+def say_hello(name):
+    print(f"Hello there, {name}!")
+
+def calc_disc_surface(radius):
+    return radius * radius * 3.1415
+
+if __name__ == "__main__":
+    name = input("enter your name: ")
+    say_hello(name)
+
+    radius = float(input("enter the radius of the disc: "))
+    surface = calc_disc_surface(radius)
+
+    print(f"Surface area of the disc: {surface}")
