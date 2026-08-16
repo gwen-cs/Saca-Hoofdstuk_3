@@ -10,8 +10,6 @@ def add_todo():
 
     todo_list.append(item)
 
-
-
 def remove_todo():
     number = int(input("Welk item wil je dat ik wis?").strip())
 
@@ -23,7 +21,6 @@ def remove_todo():
 def list_todo():
     for i, do in enumerate (todo_list):
         print(f"{i} - {do}")
-
 
 for index, agenda in agenda_punten.items():
     print(f"{index} - {agenda}")
